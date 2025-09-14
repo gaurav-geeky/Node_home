@@ -54,14 +54,12 @@ export default App
 
 
 /* 
-      app js front end h  ❤️     here to get data backend  
+    app js front end h  ❤️     here to get data backend  
 
-      use axios   inside   useEffect 
-      but  full   link     
+    use axios   inside   useEffect 
+    but  full   link     
 
-      do not need full link  ❤️
-
-      
+    do not need full link  ❤️
     axios.get('/api/jokes')       // do this  
 
     now  url  do not  exist   to get  backend data   into  frontend.  
@@ -77,15 +75,12 @@ export default App
     NOW  display of jokes _____
 */
 
-
-
 /*
 BAD PRACTICE :   Middleware    beech me kisi ko rokna 
 
 npm run bhild          dist folder push it in  backend 
 
 use middle ware in server js       serve static asset. 
-
 
 app.use     for middleware  (express)
 
