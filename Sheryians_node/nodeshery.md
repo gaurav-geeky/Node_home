@@ -17,8 +17,9 @@ that code will create server with c++ modules of v8 engine.
 
 6. npm init ->  package.json -> lekha jokha of project
 
-
 # http  modules. 
+
+
 
 # vdo_3   NPM understanding. 
 
@@ -36,6 +37,34 @@ we need text to speech  feature lagana h.
 4. dev dependencies - jo only devlopment me kaam ayega pr jab app ban jayega aur upload hoga tab inn package ko use ni krenge. 
 
 
+
+# vdo 4. 
+
+1. express js is npm package. 
+2. it is a framework : something which tells you how to do work, __. flow , Steps, .__
+
+
+# vdo 5.  npm i cookie-parser.
+
+hum jab kuch bhi FE (browswer pr) rakhte h  aur jb bhi aap BE pr request kroge wo   FE pr saved data apneaap BE pr chala jayega. 
+
+tell website I want photo 
+1st login 
+take photo
+___ when login process complete , server forgets you. ___ 
+
+when next tym you come to website  LOGIN again n again.  
+this is frustating
+# session cookies : data is saved on frontEnd. not only login
+
+after login we got a string from server (to client) i.e. cookie
+browser pe save h  COOKIE 
+client  _________________session ______________  server 
+that string removed so we have logged out.... 
+
+__. that DATA is mainly used in login (cookie).  .__
+session : that process is still 
+Time    login to logout. 
 
 
 

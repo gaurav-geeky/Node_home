@@ -1,0 +1,20 @@
+{
+  "name": "backend-connect-db",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "gaurav",
+  "type": "module",
+  "main": "index1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "mongoose": "^8.18.1"
+  }
+}
+ 
+

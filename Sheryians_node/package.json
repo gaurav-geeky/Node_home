@@ -12,6 +12,7 @@
   "type": "commonjs",
   "dependencies": {
     "accessibility": "^3.0.9",
+    "express": "^5.1.0",
     "one-liner-joke": "^1.2.2"
   }
 }
