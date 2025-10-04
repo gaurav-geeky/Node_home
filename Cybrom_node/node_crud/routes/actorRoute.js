@@ -13,8 +13,12 @@ route.get('/display', actorControll.displayPg);
 route.get('/search', actorControll.searchPg); 
 route.post('/search', actorControll.Actorsrch);  
 
+route.get("/update", actorControll.updatePg);  
+route.get("/datadelete", actorControll.deleteDataPg);  
+
+route.get("/dataedit", actorControll.dataEditPg); 
+route.post("/saveEdit", actorControll.saveEditPg); 
 
 module.exports = route; 
 
 // display      // search     // delete     // edit 
-

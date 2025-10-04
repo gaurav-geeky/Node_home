@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form page</title>
+</head>
+
+<body bgcolor="lightblue">
+
+    <a href="/actor/home"> HOME </a> |
+    <a href="/actor/form"> FORM </a> |
+    <a href="/actor/display"> DISPLAY </a> |
+    <a href="/actor/search"> SEARCH </a> |
+    <a href="/actor/update"> UPDATE </a> |
+
+
+    <h1> edit data here only .... save it..</h1>
+
+    <form action="/actor/saveEdit" method="post">
+
+        <input type="hidden" name="id" value="<%= Data._id %>"> <br>
+
+        Enter name: <input type="text" name="name" value="<%= Data.name  %>"> <br>
+
+        Enter age: <input type="text" name="age" value="<%= Data.age  %>"> <br>
+
+        Enter city: <input type="text" name="city" value="<%= Data.city %>"> <br>
+
+        Enter height: <input type="text" name="height" value="<%= Data.height  %>"> <br>
+
+        <button> sAVE it. </button>
+    </form>
+
+</body>
+
+</html>

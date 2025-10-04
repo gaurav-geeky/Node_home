@@ -37,9 +37,41 @@ const searchPg = (req, res) => {
 
 const Actorsrch = async (req, res) => {
     const { naam } = req.body;
-    const actdetail = await  actorModel.find({ name: naam });
+    const actdetail = await actorModel.find({ name: naam });
     console.log(actdetail);
-    res.render("search", { Data: actdetail }); 
+    res.render("search", { Data: actdetail });
+}
+
+const updatePg = async (req, res) => {
+    const actdetail = await actorModel.find();
+    res.render("update", { Data: actdetail });
+}
+
+const deleteDataPg = async (req, res) => {
+    const { id } = req.query;
+    await actorModel.findByIdAndDelete(id)
+
+    const Actorinfo = await actorModel.find();
+    res.render("update", { Data: Actorinfo });
+}
+
+const dataEditPg = async (req, res) => {
+    const { id } = req.query;
+    const Actorinfo = await actorModel.findById(id);
+    res.render("edit", { Data: Actorinfo });
+}
+
+const saveEditPg = async (req, res) => {
+    const { id, name, age, city, height } = req.body; 
+    await actorModel.findByIdAndUpdate( id, {
+        name: name, 
+        age: age, 
+        city: city, 
+        height: height,
+    })
+
+    const actdetail = await actorModel.find() 
+    res.render("update", { Data: actdetail }); 
 }
 
 module.exports = {
@@ -48,7 +80,11 @@ module.exports = {
     dataPg,
     displayPg,
     searchPg,
-    Actorsrch, 
+    Actorsrch,
+    updatePg,
+    deleteDataPg,
+    dataEditPg,
+    saveEditPg, 
 
 }
 

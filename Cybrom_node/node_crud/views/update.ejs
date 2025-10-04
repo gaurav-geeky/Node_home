@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>display page</title>
 </head>
-<body bgcolor="lightyellow">
+<body bgcolor="pink">
 
     <a href="/actor/home"> HOME </a>  | 
     <a href="/actor/form"> FORM </a>    |  
@@ -15,28 +15,32 @@
     <a href="/actor/search"> SEARCH </a>    |  
     <a href="/actor/update"> UPDATE </a>    |  
 
-    <h2> Search actor details here only  ...</h2> 
+    <h2> edit or delete data here..  ..</h2> 
 
-    <form action="/actor/search" method="post">
-        serach name : <input style="padding: 3px 6px;" type="text" name="naam">
-        <button> srch it.. </button>
-    </form>
-    <table border="1">
-        <tr>
+    <table border="1" align="center" width="700" >
+        <tr bgcolor="orange">
             <th>name </th>
             <th>age</th>
             <th>city</th>
             <th>height</th>
+            <th>EDIT/ DELETE</th>
         </tr>
 
         <% 
             Data.forEach( (val)=> {
                 %>
-                    <tr>
+                    <tr  align="center">
                         <td> <%= val.name   %></td>
                         <td> <%= val.age  %></td>
                         <td> <%= val.city  %></td>
                         <td> <%= val.height  %></td>
+                        <td> 
+
+                            <a href="/actor/datadelete?id=<%= val._id %>"> delete it</a>
+                            &ensp; 
+                            <a href="/actor/dataedit?id=<%= val._id %>"> edit it</a>
+                           
+                        </td>
                     </tr>
                 <%
             })
