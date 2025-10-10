@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 function Form() {
@@ -13,8 +12,8 @@ function Form() {
     }
 
     const handelSubmit = async (e) => {
-        const api = "http://localhost:9000/save";
-        const resp = await axios.post(api, frmdata);
+        const api = "http://localhost:9000/save"; 
+        const resp = await axios.post(api, frmdata); // api me form data dalo
         console.log(resp);
     }
 

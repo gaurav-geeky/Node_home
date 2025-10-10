@@ -9,6 +9,8 @@ function Layout() {
                 <Link style={{ color: 'red', textDecoration: 'none' }} to="/">Home</Link>
                 <Link style={{ color: 'blue', textDecoration: 'none' }} to="/form">Form</Link>
                 <Link style={{ color: 'blue', textDecoration: 'none' }} to="/display">Display</Link>
+                <Link style={{ color: 'red', textDecoration: 'none' }} to="/search">Search</Link>
+                <Link style={{ color: 'red', textDecoration: 'none' }} to="/update">Update</Link>
             </nav>
 
             <Outlet />

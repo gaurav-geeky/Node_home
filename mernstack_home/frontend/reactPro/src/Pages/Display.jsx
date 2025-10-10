@@ -7,7 +7,7 @@ function Display() {
 
     const getData = async () => {
         let api = "http://localhost:9000/display";  // th. backend link
-        let response = await axios.get(api); // get res from back 
+        let response = await axios.get(api); // getting res from back 
         console.log(response.data);
         setMydata(response.data);
     }
@@ -18,7 +18,7 @@ function Display() {
     const ans = mydata.map((key) =>
     (
         <>
-            <tr align="center">
+            <tr align="center" bgcolor='lightyellow' style={{ color: "blue" }}>
                 <td> {key.name} </td>
                 <td> {key.rollno} </td>
                 <td> {key.city} </td>
@@ -30,9 +30,11 @@ function Display() {
 
     return (
         <>
-            here is our DATA
+
             <div style={{ height: "90vh", border: "1px solid black" }}>
-                <table border={1} width={650} align='center'>
+
+                <h1> Display all data here </h1>
+                <table border={1} width={700} align='center' style={{ margin: "20px auto", }} >
                     <tr>
                         <th>Name</th>
                         <th>Roll no. </th>
@@ -41,9 +43,11 @@ function Display() {
                     </tr>
                     {ans}
                 </table>
+
             </div>
         </>
     )
 }
 
 export default Display
+
