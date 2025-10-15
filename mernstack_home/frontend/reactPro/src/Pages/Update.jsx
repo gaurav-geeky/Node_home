@@ -25,7 +25,7 @@ function Update() {
         dataLoad();
     }
 
-    //  🧠 🚀 🧠 🚀
+    //  🧠 🚀 🧠 🚀   👇 
     // Edit data
     const myEdit = async (e) => {
         const api = `http://localhost:9000/updateEdit?id=${e}`;
@@ -55,7 +55,7 @@ function Update() {
         dataLoad();
     }
 
-    //  🧠 🚀 🧠 🚀
+    //  🧠 🚀 🧠 🚀   ☝️
 
     const result = showdata.map((each) => {
         return (
@@ -75,7 +75,6 @@ function Update() {
         )
     })
 
-
     return (
         <>
             <div style={{ height: "90vh", border: "1px solid black" }} >
@@ -93,7 +92,6 @@ function Update() {
                     </tr>
                     {result}
                 </table>
-
 
                 {/* Data to edit   🧠 🚀 🧠 🚀 */}
                 {editme && (
