@@ -15,13 +15,24 @@
         <div style="padding: 10px;">
 
             <form action=" ">
-                <input style="display: block; padding-top: 2px; padding-left: 5px; background-color: gray; width: 100%;" type="text"
-                    placeholder="title details">
+                <input style="display: block; padding-top: 2px; padding-left: 5px; background-color: gray; width: 100%;"
+                    type="text" placeholder="title details">
 
                 <textarea placeholder="write your task details here"></textarea>
                 <input type="submit" value="Create Task">
             </form>
 
+            <h1> hello <%= naam %>
+            </h1>
+
+            <ul>
+                <% 
+                for (let i=0; i<data.length; i++) 
+                { %>
+                    <li> <%= data[i] %> </li>
+                <% } 
+                %>
+            </ul>
         </div>
     </div>
 </body>

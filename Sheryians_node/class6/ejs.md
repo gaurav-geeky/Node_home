@@ -14,8 +14,30 @@ image, audio, video ,  vanila js , css files all static
 by using this we no need to give  /public   path while using js, css  etc.  
 
 
+# EJS  EJS  EJS   EJS  EJS 
 
+const data = ["golu", "ranu", "sanu", "kanu", "pinnu"]; 
 
+app.get("/home", (req, res)=> { 
+        res.render("home", {naam: "cybrom" , data: data}); 
+})
+
+<h1> hello <%= naam %>
+            </h1>
+
+            <ul>
+                <% 
+
+                for (let i=0; i<data.length; i++)
+
+                { %>
+                    <li> <%= data[i] %> </li>
+                <% }
+
+                %>
+            </ul>
+
+# to get dynamic values while making express routes... 
 
 
 

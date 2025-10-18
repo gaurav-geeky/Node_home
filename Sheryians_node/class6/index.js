@@ -1,22 +1,12 @@
 
-const path = require('path'); 
 const express = require('express'); 
-const fs = require('fs');  
 const app = express(); 
 
 app.set("view engine", 'ejs'); 
-app.use(express.static(path.join(__dirname, "public")));  
+const data = ["golu", "ranu", "sanu", "kanu", "pinnu"]; 
 
-
-
-
-app.get("/home", (req, res)=> {
-    fs.readdir(`./files`, (err, files)=> {
-        if (err) throw err; 
-        // console.log(files)
-        res.render("home", {"files": files})  
-    })
-    
+app.get("/home", (req, res)=> { 
+        res.render("home", {naam: "cybrom" , data: data}); 
 })
 
 app.get("/profile/:user", (req, res)=> { // params for name only
