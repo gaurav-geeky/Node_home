@@ -6,7 +6,7 @@ function Display() {
     let [mydata, setMydata] = useState([]);
 
     const getData = async () => {
-        let api = "http://localhost:9000/display";  // th. backend link
+        let api = `${import.meta.env.VITE_BACK}/display`;  // th. backend link
         let response = await axios.get(api); // getting res from back 
         console.log(response.data);
         setMydata(response.data);

@@ -8,7 +8,7 @@ function Update() {
     let [editme, setEditme] = useState(null);
 
     let dataLoad = async () => {
-        let api = "http://localhost:9000/displayupdate";
+        let api = `${import.meta.env.VITE_BACK}/displayupdate`;
         const response = await axios.put(api)
         console.log(response.data);
         setShowdata(response.data);
@@ -19,7 +19,7 @@ function Update() {
     }, [])
 
     const myDel = async (e) => {
-        const api = `http://localhost:9000/updatedelete?id=${e}`;
+        const api = `${import.meta.env.VITE_BACK}/updatedelete?id=${e}`;
         const response = await axios.post(api);
         alert(response.data.msg);
         dataLoad();
@@ -28,7 +28,7 @@ function Update() {
     //  🧠 🚀 🧠 🚀   👇 
     // Edit data
     const myEdit = async (e) => {
-        const api = `http://localhost:9000/updateEdit?id=${e}`;
+        const api = `${import.meta.env.VITE_BACK}/updateEdit?id=${e}`;
         const response = await axios.post(api);
         console.log(response.data)
         setEditme(response.data);

@@ -1,25 +1,22 @@
 import axios from 'axios';
-import React from 'react'
-import { Link } from 'react-router-dom'
-
 
 function Home() {
 
-    const hanldeSubmit1 = async ()=> {
-        const api = `http://localhost:9000/home`; 
-        const response = await axios.get(api); 
-        console.log(response.data); 
+    const hanldeSubmit1 = async () => {
+        const api = `${import.meta.env.VITE_BACK}/home`;
+        const response = await axios.get(api);
+        console.log(response.data);
     }
-    
-    const hanldeSubmit2 = async ()=> {
-        const api = `http://localhost:9000/about`; 
-        const response = await axios.get(api); 
-        console.log(response.data); 
+
+    const hanldeSubmit2 = async () => {
+        const api = `${import.meta.env.VITE_BACK}/about`;
+        const response = await axios.get(api);
+        console.log(response.data);
     }
-    const hanldeSubmit3 = async ()=> {
-        const api = `http://localhost:9000/service`; 
-        const response = await axios.get(api); 
-        console.log(response.data); 
+    const hanldeSubmit3 = async () => {
+        const api = `${import.meta.env.VITE_BACK}/service`;
+        const response = await axios.get(api);
+        console.log(response.data);
     }
 
 

@@ -9,7 +9,7 @@ function Search() {
     const [databox, setDatabox] = useState([]);   // to get data 
 
     const handelSubmit = async () => {
-        let api = "http://localhost:9000/search";
+        let api = `${import.meta.env.VITE_BACK}/search`;
         const response = await axios.post(api, { newkey: ok }) // sending
         console.log(response.data);
         setDatabox(response.data);

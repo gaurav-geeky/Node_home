@@ -12,7 +12,7 @@ function Form() {
     }
 
     const handelSubmit = async (e) => {
-        const api = "http://localhost:9000/save"; 
+        const api = `${import.meta.env.VITE_BACK}/save`; 
         const resp = await axios.post(api, frmdata); // api me form data dalo
         console.log(resp);
     }

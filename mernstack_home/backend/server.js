@@ -4,8 +4,9 @@ const route = require('./route/stuRoute');
 const bodyparser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
+require('dotenv').config() 
 
-mongoose.connect('mongodb://127.0.0.1:27017/nodeData').then(() => {
+mongoose.connect(process.env.DBCONN).then(() => {
     console.log("db connected successfully.....");
 });
 
@@ -23,12 +24,17 @@ app.use((req, res, next) => {
     next();
 })
 
-app.use((req, res, next) => {
-    console.log("2nd main middleware");
-    next();
-})
 
-
+// app.get("/home", (req, res, next) => {
+//     let name = false;
+//     if (name) {
+//         res.status(200).send("home page exists..");
+//     }
+//     else {
+//         res.status(220).send("home page not exist, ERROR...");
+//     }
+// }
+// )
 
 app.get("/home",
     (req, res, next) => {
@@ -56,7 +62,8 @@ app.use((req, res, next) => {
     next();
 })
 
-
-app.listen(9000, () => {
+const port = process.env.PORT
+app.listen(port, () => {
     console.log("server 9000 is succeed....");
 })
+
